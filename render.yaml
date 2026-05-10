@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: autoassist-api
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: false
